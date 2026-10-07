@@ -10,6 +10,16 @@ body, html {
     overflow-x: hidden; /* 禁止横向滚动条 */
 }
 
+/* 嵌入 iframe 时隐藏滚动条，但保留滚轮/触控滚动 */
+html.embedded,
+html.embedded body {
+    scrollbar-width: none;
+}
+html.embedded::-webkit-scrollbar,
+html.embedded body::-webkit-scrollbar {
+    display: none;
+}
+
 /* Container for the entire splash page */
 #splash-container {
     width: 100vw;
